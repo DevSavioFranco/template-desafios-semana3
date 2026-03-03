@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Projeto Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Mini-Projeto Flask</h1>
+        <p>Edite este template para o seu tema!</p>
+
+        <!-- FORMULÁRIO: adapte os campos para o seu tema -->
+        <form method="POST" action="/calcular">
+            <div class="form-group">
+                <label for="campo1">Campo 1:</label>
+                <input type="text" id="campo1" name="campo1" placeholder="Digite algo..." required>
+            </div>
+            <div class="form-group">
+                <label for="campo2">Campo 2:</label>
+                <input type="text" id="campo2" name="campo2" placeholder="Digite algo..." required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- RESULTADO: aparece após o formulário ser enviado -->
+        {% if resultado %}
+        <div class="resultado">
+            <h2>Resultado</h2>
+            <p>{{ resultado }}</p>
+        </div>
+        {% endif %}
+
+        {% if erro %}
+        <div class="erro">
+            <p>{{ erro }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

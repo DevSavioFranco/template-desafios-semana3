@@ -1,0 +1,96 @@
+/* Mini-Projeto Flask — Estilo básico */
+/* Sinta-se livre para personalizar! */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #7C3AED;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #7C3AED;
+    outline: none;
+}
+
+button {
+    background-color: #7C3AED;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #6D28D9;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #F0FDF4;
+    border-left: 4px solid #10B981;
+    border-radius: 4px;
+}
+
+.erro {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #FEF2F2;
+    border-left: 4px solid #EF4444;
+    border-radius: 4px;
+    color: #DC2626;
+}
