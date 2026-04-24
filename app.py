@@ -35,20 +35,21 @@ def inicio():
 # Adapte para o seu tema escolhido!
 # ============================================
 @app.route("/calcular", methods=["POST"])
+@app.route("/calcular", methods=["POST"])
 def calcular():
     try:
-        # TODO: Substitua este exemplo pela lógica do seu tema
-        # Exemplo para IMC:
-        # peso = float(request.form["peso"])
-        # altura = float(request.form["altura"])
-        # imc = peso / (altura ** 2)
-        # return render_template("index.html", resultado=f"Seu IMC: {imc:.1f}")
+        peso = float(request.form["peso"])
+        altura = float(request.form["altura"])
+        
+        # Se o usuário digitou algo como 175 (cm), transforma em 1.75 (m)
+        if altura > 3: 
+            altura = altura / 100
+            
+        imc = peso / (altura ** 2)
+        return render_template("index.html", resultado=f"Seu IMC: {imc:.1f}")
+    except (ValueError, KeyError, ZeroDivisionError):
+        return render_template("index.html", erro="Dados inválidos!")
 
-        # Por enquanto retorna a página inicial
-        return render_template("index.html", resultado="Implemente sua lógica aqui!")
-
-    except (ValueError, KeyError):
-        return render_template("index.html", erro="Dados inválidos! Tente novamente.")
 
 
 # ============================================

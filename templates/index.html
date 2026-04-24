@@ -9,17 +9,17 @@
 <body>
     <div class="container">
         <h1>Mini-Projeto Flask</h1>
-        <p>Edite este template para o seu tema!</p>
+        <p>Calculadora de IMC</p>
 
         <!-- FORMULÁRIO: adapte os campos para o seu tema -->
         <form method="POST" action="/calcular">
             <div class="form-group">
-                <label for="campo1">Campo 1:</label>
-                <input type="text" id="campo1" name="campo1" placeholder="Digite algo..." required>
+                <label for="campo1">Peso:</label>
+                <input type="number" id="campo1" name="peso" placeholder="Digite o peso..." required>
             </div>
             <div class="form-group">
-                <label for="campo2">Campo 2:</label>
-                <input type="text" id="campo2" name="campo2" placeholder="Digite algo..." required>
+                <label for="campo2">Altura:</label>
+                <input type="number" id="campo2" name="altura" placeholder="Digite a altura..." required>
             </div>
             <button type="submit">Enviar</button>
         </form>
