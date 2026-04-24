@@ -39,7 +39,7 @@ def inicio():
 def calcular():
     try:
         peso = float(request.form["peso"])
-        altura = float(request.form["altura"])
+        altura = float(request.form["alturas"])
         
         # Se o usuário digitou algo como 175 (cm), transforma em 1.75 (m)
         if altura > 3: 
